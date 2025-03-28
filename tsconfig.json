@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // Bunu da ekle
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}

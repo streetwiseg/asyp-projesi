@@ -1,0 +1,127 @@
+/* 1. Bootstrap'i En Üstte Import Et */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* 2. Projeye Özgü Genel Stil Ayarları */
+
+/* Temel yazı tipleri ve renkler */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7f9; /* Açık gri arka plan */
+  color: #333; /* Metin rengi */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  color: #2b2d42; /* Başlık renkleri */
+}
+
+p {
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #555; /* Paragraf metni rengi */
+}
+
+/* 3. Header ve Footer Stil Ayarları */
+
+/* Header */
+.navbar {
+  background-color: #007bff; /* Kurumsal mavi renk */
+  padding: 15px 30px;
+}
+
+.navbar .navbar-brand {
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffc107 !important; /* Hover rengi */
+}
+
+/* Footer */
+footer {
+  background-color: #222222; /* Koyu footer */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* 4. Sayfa İçeriği ve Kartlar */
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.card-body {
+  background-color: #ffffff;
+}
+
+.card-title {
+  color: #2b2d42;
+}
+
+/* 5. Butonlar */
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+/* 6. Diğer Özel Stil Ayarları */
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .footer {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+
+  .card {
+    margin-bottom: 15px;
+  }
+}

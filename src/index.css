@@ -1,0 +1,162 @@
+/* ===============================
+   Bootstrap Temelleri – Her zaman en üstte!
+================================== */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* ===============================
+   Global Değişkenler ve Temel Ayarlar
+================================== */
+:root {
+  --radius: 0.625rem;
+  --background: #ffffff;
+  --foreground: #212529;
+
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --accent: #198754;
+  --muted: #f8f9fa;
+  --danger: #dc3545;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--foreground);
+  background-color: var(--background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===============================
+   Gövde & Temel Yapı
+================================== */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, sans-serif;
+}
+
+/* ===============================
+   Linkler
+================================== */
+a {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+a:hover {
+  color: #0056b3;
+}
+
+/* ===============================
+   Başlıklar
+================================== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--foreground);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* ===============================
+   Butonlar (genel görünüm + override)
+================================== */
+button {
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.25s, border-color 0.25s;
+}
+button:hover {
+  background-color: #0056b3;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* ===============================
+   Container Düzeltmesi (full-width yapılar)
+================================== */
+.container {
+  max-width: 1140px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* ===============================
+   Footer Düzeni
+================================== */
+footer {
+  background-color: #212529;
+  color: #adb5bd;
+}
+footer a {
+  color: #f8f9fa;
+}
+footer a:hover {
+  color: #dee2e6;
+}
+
+/* ===============================
+   Responsive Başlık Ayarları
+================================== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ===============================
+   Light Mode Uyumu
+================================== */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #212529;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+  a:hover {
+    color: #0b5ed7;
+  }
+  button {
+    background-color: var(--primary);
+  }
+}
+
+/* ===============================
+   Kapsayıcı Yardımcı Sınıflar
+================================== */
+.text-muted-light {
+  color: #6c757d;
+}
+.bg-muted {
+  background-color: var(--muted);
+}
+.rounded-xl {
+  border-radius: 1rem;
+}
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
